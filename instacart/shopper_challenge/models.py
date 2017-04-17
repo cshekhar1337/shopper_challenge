@@ -11,7 +11,7 @@ class Applicant(models.Model):
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
     application_date = models.DateField(db_index=True, default=timezone.now)
-    workflow_state = models.CharField(max_length=100, default='Applied')
+    workflow_state = models.CharField(max_length=100, default='applied')
     created_at = models.DateField(default=timezone.now)
     updated_at = models.DateField(default=timezone.now)
 

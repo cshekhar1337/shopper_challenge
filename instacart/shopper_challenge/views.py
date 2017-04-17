@@ -204,7 +204,23 @@ def signup_success(request):
 
 
 def check_status(request):
-    return HttpResponse("Hello, world!")
+    if request.POST:
+        email = request.POST['email']
+        if not email:
+            error_message = "Please enter a valid email."
+            messages.add_message(request, messages.ERROR, error_message)
+            return render(request,'shopper_challenge/login_signup.html')
+        else:
+            if(Applicant.objects.filter(email=email).exists()):
+                shopper = Applicant.objects.filter(email=email)[0]
+
+                # Set the user's email in session
+                request.session['email'] = shopper.email
+                return render(request,'shopper_challenge/applicant_view.html', shopper.__dict__)
+            else:
+                messages.add_message(request, messages.ERROR, "No application associated with this email")
+                return render(request,'shopper_challenge/login_signup.html')
+
 
 
 
@@ -241,11 +257,9 @@ def update(request):
 
 
 def logout(request):
-    try:
+
         del request.session['email']
-    except Exception as e:
-        errorprint("Failed to delete session. Email : %s, Error : %s", request.session['email'], str(e))
-    return render(request,'shopper_challenge/login_signup.html')
+        return render(request,'shopper_challenge/login_signup.html')
 
 
 
