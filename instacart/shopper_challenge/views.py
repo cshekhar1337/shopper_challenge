@@ -126,13 +126,46 @@ def generate_funnel_report(request_params):
 #####################################################################
 
 def home(request):
-    return HttpResponse("Hello, world!" )
+    return render(request,'shopper_challenge/login_signup.html')
+
 
 
 
 
 def signup(request):
-    return HttpResponse("Hello, world!")
+
+    if request.POST:
+        #Obtain form data from the request and store in session variables so they can be accessed across functions
+        user_info = request.POST
+        is_valid_user = True
+
+        if Applicant.objects.filter(email = user_info['email']).exists():
+            is_valid_user = False
+            error_message = "This email is already registered!"
+            logger.error("This email is already registered. Email : %s", user_info['email'])
+            messages.add_message(request, messages.ERROR, error_message)
+
+        if Applicant.objects.filter(phone = user_info['phone']).exists():
+            is_valid_user = False
+            error_message = "This phone number is already registered!"
+            logger.error("This phone number is already registered. Phone : %s", user_info['phone'])
+            messages.add_message(request, messages.ERROR, error_message)
+
+        if not is_valid_user:
+            return render(request, 'shopper_challenge/login_signup.html')
+
+        # If the user is valid, set the user session details
+        request.session['name'] = user_info['name']
+        request.session['email'] = user_info['email']
+        request.session['phone'] = user_info['phone']
+        request.session['city'] = user_info['city']
+        request.session['state'] = user_info['state']
+        request.session['zipcode'] = user_info['zipcode']
+
+        # Redirect the user to background check consent form
+        return render(request,'shopper_challenge/terms_agreement.html')
+
+
 
 
 
