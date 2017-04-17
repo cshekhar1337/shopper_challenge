@@ -1,0 +1,25 @@
+{% extends "shopper_challenge/base.html" %}
+
+
+{% block header %}
+    {% include "shopper_challenge/btn_edit_logout.html" %}
+{% endblock %}
+
+{% block content %}
+<div class = "div-background">
+<div class="container">
+
+   <section>
+    Welcome back, <b>{{ name }}</b>
+    <br/>
+    <p>Application status is <b>{{ workflow_state}}</b> </p>
+   </section>
+   
+   <hr>
+   
+   <section>
+       {% include "shopper_challenge/table_shopper_print.html" %}
+   </section>  
+</div>
+</div>
+{% endblock %}

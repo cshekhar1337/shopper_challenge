@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 import random, string, time, datetime
 import collections,json
+from django.contrib import messages
 from django.db.models import Count
 
 from collections import OrderedDict
@@ -142,13 +143,12 @@ def signup(request):
         if Applicant.objects.filter(email = user_info['email']).exists():
             is_valid_user = False
             error_message = "This email is already registered!"
-            logger.error("This email is already registered. Email : %s", user_info['email'])
+
             messages.add_message(request, messages.ERROR, error_message)
 
         if Applicant.objects.filter(phone = user_info['phone']).exists():
             is_valid_user = False
             error_message = "This phone number is already registered!"
-            logger.error("This phone number is already registered. Phone : %s", user_info['phone'])
             messages.add_message(request, messages.ERROR, error_message)
 
         if not is_valid_user:
@@ -210,19 +210,42 @@ def check_status(request):
 
 
 def edit(request):
-    return HttpResponse("Hello, world!")
+    shopper = Applicant.objects.filter(email=request.session['email'])
+   # print(shopper[0].__dict__)
+    return render(request,'shopper_challenge/update_application.html', shopper[0].__dict__)
 
 
 
 
 def update(request):
-    return HttpResponse("Hello, world!")
+    # Fetch the user details from db based on session.email key
+    shopper = Applicant.objects.filter(email=request.session['email'])[0]
+
+
+    if shopper.phone != int(request.POST['phone']) and Applicant.objects.filter(phone = int(request.POST['phone'])).exists():
+        messages.add_message(request, messages.ERROR, "Phone number already registered with a different user")
+        return render(request,'shopper_challenge/update_application.html',shopper.__dict__)
+
+    '''
+    If user update is valid, update all fields except email.
+    '''
+    shopper.name = request.POST['name']
+    shopper.phone = request.POST['phone']
+    shopper.city = request.POST['city']
+    shopper.state = request.POST['state']
+    shopper.save()
+    return render(request,'shopper_challenge/applicant_view.html',shopper.__dict__)
+
 
 
 
 
 def logout(request):
-    return HttpResponse("Hello, world!")
+    try:
+        del request.session['email']
+    except Exception as e:
+        errorprint("Failed to delete session. Email : %s, Error : %s", request.session['email'], str(e))
+    return render(request,'shopper_challenge/login_signup.html')
 
 
 
