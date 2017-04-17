@@ -160,7 +160,6 @@ def signup(request):
         request.session['phone'] = user_info['phone']
         request.session['city'] = user_info['city']
         request.session['state'] = user_info['state']
-        request.session['zipcode'] = user_info['zipcode']
 
         # Redirect the user to background check consent form
         return render(request,'shopper_challenge/terms_agreement.html')
@@ -171,7 +170,35 @@ def signup(request):
 
 
 def signup_success(request):
-    return HttpResponse("Hello, world!")
+    if request.POST:
+        # Check if the user is already registered
+        shopper = Applicant.objects.filter(email=request.session['email'])
+        if shopper:
+            return render(request,'shopper_challenge/application_success_page.html',shopper[0].__dict__)
+
+
+
+        # Register the user and save user information in database
+        name = request.session['name']
+        email = request.session['email']
+        phone = request.session['phone']
+        city = request.session['city']
+        state = request.session['state']
+
+        shopper = Applicant(name=name, email=email, phone=phone, city=city, state=state)
+        shopper.save()
+
+
+        # Delete all user's session data except for 'email' which is used to maintain user-session
+        del request.session['name']
+        del request.session['phone']
+        del request.session['city']
+        del request.session['state']
+
+
+
+        # Redirect user to the registration confirmation page
+        return render(request,'shopper_challenge/application_success_page.html', shopper.__dict__)
 
 
 

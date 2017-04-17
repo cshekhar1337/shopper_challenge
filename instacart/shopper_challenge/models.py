@@ -9,7 +9,6 @@ class Applicant(models.Model):
     email = models.CharField(max_length=100, unique=True)
     phone = models.CharField(max_length= 11,unique=True)
     city = models.CharField(max_length=100)
-    zipcode = models.CharField(max_length= 6)
     state = models.CharField(max_length=100)
     application_date = models.DateField(db_index=True, default=timezone.now)
     workflow_state = models.CharField(max_length=100, default='Applied')

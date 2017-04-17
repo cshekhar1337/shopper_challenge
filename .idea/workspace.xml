@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddf366f2-ac21-4120-baf7-25d63b93ce84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/static/images/grocery.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/static/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/error_page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/login_signup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/terms_agreement.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instacart/db.sqlite3" afterPath="$PROJECT_DIR$/instacart/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instacart/shopper_challenge/models.py" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/login_signup.html" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/login_signup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instacart/shopper_challenge/views.py" afterPath="$PROJECT_DIR$/instacart/shopper_challenge/views.py" />
     </list>
     <ignored path="shopper_challenge.iws" />
@@ -35,8 +30,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -54,31 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/instacart/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/instacart/instacart/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1155">
-              <caret line="162" column="55" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
+            <state relative-caret-position="45">
+              <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -86,11 +61,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html">
+      <file leaf-file-name="application_success_page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/application_success_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="btn_edit_logout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/btn_edit_logout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheets_js_css.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/stylesheets_js_css.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -99,8 +104,8 @@
       <file leaf-file-name="login_signup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/login_signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="93" column="161" selection-start-line="93" selection-start-column="161" selection-end-line="93" selection-end-column="161" />
+            <state relative-caret-position="1020">
+              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -119,7 +124,7 @@
       <file leaf-file-name="terms_agreement.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/terms_agreement.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
+            <state relative-caret-position="318">
               <caret line="33" column="143" selection-start-line="33" selection-start-column="143" selection-end-line="33" selection-end-column="143" />
               <folding />
             </state>
@@ -139,13 +144,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/instacart/shopper_challenge/models.py" />
         <option value="$PROJECT_DIR$/instacart/instacart/urls.py" />
         <option value="$PROJECT_DIR$/instacart/shopper_challenge/urls.py" />
         <option value="$PROJECT_DIR$/instacart/instacart/settings.py" />
-        <option value="$PROJECT_DIR$/instacart/shopper_challenge/views.py" />
         <option value="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/terms_agreement.html" />
+        <option value="$PROJECT_DIR$/instacart/shopper_challenge/models.py" />
         <option value="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/login_signup.html" />
+        <option value="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/application_success_page.html" />
+        <option value="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html" />
+        <option value="$PROJECT_DIR$/instacart/shopper_challenge/views.py" />
       </list>
     </option>
   </component>
@@ -318,6 +325,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge" />
       <recent name="$PROJECT_DIR$/instacart/shopper_challenge" />
     </key>
   </component>
@@ -953,12 +961,12 @@
       <option name="presentableId" value="Default" />
       <updated>1492442676421</updated>
       <workItem from="1492442678005" duration="8024000" />
-      <workItem from="1492452504457" duration="5476000" />
+      <workItem from="1492452504457" duration="7164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13500000" />
+    <option name="totallyTimeSpent" value="15188000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1045,7 +1053,7 @@
         <state relative-caret-position="330">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#643#684#0" expanded="true" />
+            <element signature="e#643#684#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1056,16 +1064,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1086,20 +1084,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/instacart/instacart/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#643#684#0" expanded="true" />
+            <element signature="e#643#684#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1120,6 +1110,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/terms_agreement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="33" column="143" selection-start-line="33" selection-start-column="143" selection-end-line="33" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/login_signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/static/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1128,26 +1144,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/terms_agreement.html">
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/btn_edit_logout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="143" selection-start-line="33" selection-start-column="143" selection-end-line="33" selection-end-column="143" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/login_signup.html">
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/update_application.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="93" column="161" selection-start-line="93" selection-start-column="161" selection-end-line="93" selection-end-column="161" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/stylesheets_js_css.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/templates/shopper_challenge/application_success_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/instacart/shopper_challenge/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1155">
-          <caret line="162" column="55" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
+        <state relative-caret-position="45">
+          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
