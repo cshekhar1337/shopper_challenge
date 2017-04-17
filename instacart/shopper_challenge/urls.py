@@ -15,7 +15,29 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 
+from django.conf.urls import url, handler404, handler403, handler400, handler500
+from django.conf import settings
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+from . import views
+
+app_name = 'shopper_challenge'
 urlpatterns = [
-
-
+    url(r'^$', views.home, name='home'),
+    url(r'^signup/$', views.signup, name='signup'),
+    url(r'^application_success_page/$', views.signup_success, name='success_page'),
+    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^edit/$', views.edit, name='edit'),
+    url(r'^update/$', views.update, name='update'),
+    url(r'^check_status/$', views.check_status, name='login'),
+    url(r'^bulk_upload/(?P<count>(\d+))/$', views.bulk_upload, name='bulk_upload'),
+    url(r'^funnel.json/$', views.funnel, name='funnel')
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+
+handler404 = views.errorpage
+handler403 = views.errorpage
+handler400 = views.errorpage
+handler405 = views.errorpage
