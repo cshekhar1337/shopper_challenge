@@ -12,8 +12,7 @@ class Applicant(models.Model):
     state = models.CharField(max_length=100)
     application_date = models.DateField(db_index=True, default=timezone.now)
     workflow_state = models.CharField(max_length=100, default='applied')
-    created_at = models.DateField(default=timezone.now)
-    updated_at = models.DateField(default=timezone.now)
+
 
     def __str__(self):
         return '%s %s %s %s %s' % (self.id, self.name, self.email, self.phone, self.workflow_state)

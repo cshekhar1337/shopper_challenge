@@ -18,4 +18,5 @@ wheels/
 
 # IntelliJ
 /out/
-.idea/
+.idea/*
+.idea/**
