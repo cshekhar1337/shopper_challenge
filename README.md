@@ -7,6 +7,7 @@ This challenge is broken into two parts. The first part is implementing the publ
 1. Python
 2. django
 3. sqlite3
+
 Created using python version 3.6.0, django version 1.11 and sqlite3 version 3.13.0
 
 ## Steps for installation
